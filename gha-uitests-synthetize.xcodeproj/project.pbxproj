@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		915B693F265A6AA500D207EE /* UITestsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915B693E265A6AA500D207EE /* UITestsTests.swift */; };
-		915B6941265A6B4B00D207EE /* UITests_BaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915B6940265A6B4B00D207EE /* UITests_BaseTests.swift */; };
 		91DAA227265AE162007228EC /* AXEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DAA226265AE162007228EC /* AXEngine.swift */; };
 		91DAA22F265AE1B2007228EC /* from_TF_AXTextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DAA22E265AE1B2007228EC /* from_TF_AXTextTests.swift */; };
 		91DAA234265AE1D0007228EC /* ATEA_BaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DAA233265AE1D0007228EC /* ATEA_BaseTests.swift */; };
@@ -18,6 +16,7 @@
 		91DAA247265AE380007228EC /* AccessibilityTextElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DAA23D265AE31A007228EC /* AccessibilityTextElement.swift */; };
 		91DAA24B265AE382007228EC /* AccessibilityTextElementAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DAA242265AE320007228EC /* AccessibilityTextElementAdaptor.swift */; };
 		91DAA250265AE443007228EC /* from_TV_AXCaretLocationTests.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DAA24F265AE443007228EC /* from_TV_AXCaretLocationTests.swift.swift */; };
+		91DAA258265AE5F9007228EC /* NonTextElementsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DAA257265AE5F9007228EC /* NonTextElementsTests.swift */; };
 		91E0B12E265AD8EA008E9FBB /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E0B12D265AD8EA008E9FBB /* AppComponent.swift */; };
 		91F1900C265A662D00FE2C4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F1900B265A662D00FE2C4D /* AppDelegate.swift */; };
 		91F1900E265A662D00FE2C4D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F1900D265A662D00FE2C4D /* ContentView.swift */; };
@@ -45,14 +44,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		915B693E265A6AA500D207EE /* UITestsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestsTests.swift; sourceTree = "<group>"; };
-		915B6940265A6B4B00D207EE /* UITests_BaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITests_BaseTests.swift; sourceTree = "<group>"; };
 		91DAA226265AE162007228EC /* AXEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AXEngine.swift; sourceTree = "<group>"; };
 		91DAA22E265AE1B2007228EC /* from_TF_AXTextTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = from_TF_AXTextTests.swift; sourceTree = "<group>"; };
 		91DAA233265AE1D0007228EC /* ATEA_BaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATEA_BaseTests.swift; sourceTree = "<group>"; };
 		91DAA23D265AE31A007228EC /* AccessibilityTextElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityTextElement.swift; sourceTree = "<group>"; };
 		91DAA242265AE320007228EC /* AccessibilityTextElementAdaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityTextElementAdaptor.swift; sourceTree = "<group>"; };
 		91DAA24F265AE443007228EC /* from_TV_AXCaretLocationTests.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = from_TV_AXCaretLocationTests.swift.swift; sourceTree = "<group>"; };
+		91DAA257265AE5F9007228EC /* NonTextElementsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonTextElementsTests.swift; sourceTree = "<group>"; };
 		91E0B12D265AD8EA008E9FBB /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
 		91F19008265A662D00FE2C4D /* gha-uitests-synthetize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gha-uitests-synthetize.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F1900B265A662D00FE2C4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +107,46 @@
 				91DAA242265AE320007228EC /* AccessibilityTextElementAdaptor.swift */,
 			);
 			path = AccessibilityTextElement;
+			sourceTree = "<group>";
+		};
+		91DAA254265AE5D1007228EC /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				91DAA257265AE5F9007228EC /* NonTextElementsTests.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		91DAA255265AE5D6007228EC /* fromAXFocusedElement */ = {
+			isa = PBXGroup;
+			children = (
+				91DAA266265AE631007228EC /* TextViews */,
+				91DAA262265AE629007228EC /* TextFields */,
+			);
+			path = fromAXFocusedElement;
+			sourceTree = "<group>";
+		};
+		91DAA256265AE5E1007228EC /* toAXFocusedElement */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = toAXFocusedElement;
+			sourceTree = "<group>";
+		};
+		91DAA262265AE629007228EC /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				91DAA22E265AE1B2007228EC /* from_TF_AXTextTests.swift */,
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
+		91DAA266265AE631007228EC /* TextViews */ = {
+			isa = PBXGroup;
+			children = (
+				91DAA24F265AE443007228EC /* from_TV_AXCaretLocationTests.swift.swift */,
+			);
+			path = TextViews;
 			sourceTree = "<group>";
 		};
 		91F18FFF265A662D00FE2C4D = {
@@ -168,12 +206,11 @@
 		91F1902B265A662E00FE2C4D /* gha-uitests-synthetizeUITests */ = {
 			isa = PBXGroup;
 			children = (
-				915B6940265A6B4B00D207EE /* UITests_BaseTests.swift */,
-				915B693E265A6AA500D207EE /* UITestsTests.swift */,
+				91DAA256265AE5E1007228EC /* toAXFocusedElement */,
+				91DAA255265AE5D6007228EC /* fromAXFocusedElement */,
+				91DAA254265AE5D1007228EC /* Others */,
 				91F1902E265A662E00FE2C4D /* Info.plist */,
-				91DAA22E265AE1B2007228EC /* from_TF_AXTextTests.swift */,
 				91DAA233265AE1D0007228EC /* ATEA_BaseTests.swift */,
-				91DAA24F265AE443007228EC /* from_TV_AXCaretLocationTests.swift.swift */,
 			);
 			path = "gha-uitests-synthetizeUITests";
 			sourceTree = "<group>";
@@ -330,9 +367,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				91DAA247265AE380007228EC /* AccessibilityTextElement.swift in Sources */,
-				915B6941265A6B4B00D207EE /* UITests_BaseTests.swift in Sources */,
+				91DAA258265AE5F9007228EC /* NonTextElementsTests.swift in Sources */,
 				91DAA24B265AE382007228EC /* AccessibilityTextElementAdaptor.swift in Sources */,
-				915B693F265A6AA500D207EE /* UITestsTests.swift in Sources */,
 				91DAA22F265AE1B2007228EC /* from_TF_AXTextTests.swift in Sources */,
 				91DAA238265AE1FA007228EC /* AXEngine.swift in Sources */,
 				91DAA250265AE443007228EC /* from_TV_AXCaretLocationTests.swift.swift in Sources */,
