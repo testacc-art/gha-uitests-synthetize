@@ -10,7 +10,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         appComponent.setUp()
 
-        NSApplication.shared.hide(self)
+//        NSApplication.shared.hide(self)
 
         let contentView = ContentView()
 
