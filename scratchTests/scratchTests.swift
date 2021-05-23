@@ -1,14 +1,14 @@
 //
-//  gha_uitests_synthetizeTests.swift
-//  gha-uitests-synthetizeTests
+//  scratchTests.swift
+//  scratchTests
 //
-//  Created by Guillaume Leclerc on 23/05/2021.
+//  Created by Guillaume Leclerc on 24/05/2021.
 //
 
 import XCTest
-@testable import gha_uitests_synthetize
+@testable import scratch
 
-class gha_uitests_synthetizeTests: XCTestCase {
+class scratchTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
