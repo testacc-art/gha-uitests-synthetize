@@ -1,3 +1,4 @@
+@testable import gha_uitests_synthetize
 import XCTest
 
 class from_TF_AXTextTests: ATEA_BaseTests {
@@ -8,9 +9,9 @@ class from_TF_AXTextTests: ATEA_BaseTests {
         app.textFields.firstMatch.typeText(textInAXFocusedElement)
         app.textFields.firstMatch.typeKey(.leftArrow, modifierFlags: [])
 
-//        let accessibilityElement = AccessibilityTextElementAdaptor.fromAXFocusedElement()
-//
-//        XCTAssertEqual(accessibilityElement?.axValue, textInAXFocusedElement)
+        let accessibilityElement = AccessibilityTextElementAdaptor.fromAXFocusedElement()
+
+        XCTAssertEqual(accessibilityElement?.axValue, textInAXFocusedElement)
     }
 
 }
