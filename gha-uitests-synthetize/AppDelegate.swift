@@ -8,6 +8,10 @@
 import Cocoa
 import SwiftUI
 
+var eventTapCallback: CGEventTapCallBack = { proxy, _, event, _ in
+    return Unmanaged.passUnretained(event)
+}
+
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
 
@@ -27,6 +31,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.center()
         window.contentView = NSHostingView(rootView: contentView)
         window.makeKeyAndOrderFront(nil)
+        
+        guard let eventTap = CGEvent.tapCreate(
+            tap: .cghidEventTap,
+            place: .headInsertEventTap,
+            options: .defaultTap,
+            eventsOfInterest: CGEventMask(1 << CGEventType.keyDown.rawValue),
+            callback: eventTapCallback,
+            userInfo: nil
+        ) else {
+            fatalError("can't create tap")
+        }
+
+        let runLoopSource = CFMachPortCreateRunLoopSource(kCFAllocatorDefault, eventTap, 0)
+        CFRunLoopAddSource(CFRunLoopGetCurrent(), runLoopSource, .commonModes)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
