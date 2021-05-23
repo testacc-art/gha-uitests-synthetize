@@ -41,4 +41,4 @@ jobs:
     - name: run Tests
       run: xcodebuild clean -scheme gha-uitests-synthetize -configuration Debug test
     - name: run UI Tests
-      run: xcodebuild clean -scheme "AccessibilityTextElementAdaptor UITests" -configuration Debug test
+      run: xcodebuild clean -scheme "AccessibilityTextElementAdaptor UI Tests" -configuration "UI Testing" test
