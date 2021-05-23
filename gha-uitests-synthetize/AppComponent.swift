@@ -1,8 +1,9 @@
 import SwiftUI
 
 class AppComponent {
-    var accessibilityElementAdaptorTestingWindow: NSWindow!
 
+    var accessibilityElementAdaptorTestingWindow: NSWindow!
+    
     func setUp() {
         setUpWindowsState()
     }
@@ -11,6 +12,8 @@ class AppComponent {
         NSApplication.shared.hide(self)
 
         let contentView = ContentView()
+
+        
 
         accessibilityElementAdaptorTestingWindow = NSWindow(
             contentRect: NSRect(x: 0, y: 0, width: 480, height: 300),
