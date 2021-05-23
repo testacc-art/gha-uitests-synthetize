@@ -1,4 +1,3 @@
-@testable import gha_uitests_synthetizeUITests
 import XCTest
 
 class UITestsTests: UITestsTests_BaseTests {
@@ -54,6 +53,30 @@ hallelujah
 
 
         XCTAssertNotNil(AX.axFocusedElement())
+    }
+
+    func test_that_we_can_set_the_caret_location_to_0_on_a_non_empty_line() {
+        let textInAXFocusedElement = """
+those shits never stop
+i tell you
+it's biiiiiiig and long
+hallelujah
+"""
+        app.textViews.firstMatch.tap()
+        app.textViews.firstMatch.typeText(textInAXFocusedElement)
+
+        XCTAssertNotNil(AX.toAXFocusedElememt())
+    }
+
+    func test_that_we_can_set_the_caret_location_wherever_between_the_beginning_and_the_end_of_the_line() {
+        let textInAXFocusedElement = """
+those shits never stop
+
+"""
+        app.textViews.firstMatch.tap()
+        app.textViews.firstMatch.typeText(textInAXFocusedElement)
+
+        XCTAssertNotNil(AX.toAXFocusedElememt())
     }
 
 }
