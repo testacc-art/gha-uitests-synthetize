@@ -14,6 +14,15 @@
 		919B169C265AD26200FBD292 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 919B169A265AD26200FBD292 /* Main.storyboard */; };
 		919B16A8265AD26200FBD292 /* scratchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919B16A7265AD26200FBD292 /* scratchTests.swift */; };
 		919B16B3265AD26200FBD292 /* scratchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919B16B2265AD26200FBD292 /* scratchUITests.swift */; };
+		91EFF193265AD38B0095061E /* BaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EFF192265AD38A0095061E /* BaseTests.swift */; };
+		91EFF198265AD3AB0095061E /* TestsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EFF197265AD3AB0095061E /* TestsTests.swift */; };
+		91EFF19E265AD3E10095061E /* AccessibilityTextElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EFF19D265AD3E10095061E /* AccessibilityTextElement.swift */; };
+		91EFF1A6265AD3F00095061E /* AccessibilityTextElementAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EFF1A5265AD3F00095061E /* AccessibilityTextElementAdaptor.swift */; };
+		91EFF1AC265AD41D0095061E /* AXEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EFF1AB265AD41D0095061E /* AXEngine.swift */; };
+		91EFF1B6265AD4A90095061E /* AXEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EFF1AB265AD41D0095061E /* AXEngine.swift */; };
+		91EFF1BA265AD4AB0095061E /* AccessibilityTextElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EFF19D265AD3E10095061E /* AccessibilityTextElement.swift */; };
+		91EFF1BE265AD4AD0095061E /* AccessibilityTextElementAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EFF1A5265AD3F00095061E /* AccessibilityTextElementAdaptor.swift */; };
+		91EFF1CF265AD51D0095061E /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EFF1CE265AD51D0095061E /* AppComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +57,12 @@
 		919B16AE265AD26200FBD292 /* scratchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = scratchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		919B16B2265AD26200FBD292 /* scratchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scratchUITests.swift; sourceTree = "<group>"; };
 		919B16B4265AD26200FBD292 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91EFF192265AD38A0095061E /* BaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTests.swift; sourceTree = "<group>"; };
+		91EFF197265AD3AB0095061E /* TestsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsTests.swift; sourceTree = "<group>"; };
+		91EFF19D265AD3E10095061E /* AccessibilityTextElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityTextElement.swift; sourceTree = "<group>"; };
+		91EFF1A5265AD3F00095061E /* AccessibilityTextElementAdaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityTextElementAdaptor.swift; sourceTree = "<group>"; };
+		91EFF1AB265AD41D0095061E /* AXEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AXEngine.swift; sourceTree = "<group>"; };
+		91EFF1CE265AD51D0095061E /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +113,10 @@
 		919B1690265AD26100FBD292 /* scratch */ = {
 			isa = PBXGroup;
 			children = (
+				91EFF1AA265AD4130095061E /* AXEngine */,
+				91EFF19C265AD3CA0095061E /* AccessibilityTextElement */,
 				919B1691265AD26100FBD292 /* AppDelegate.swift */,
+				91EFF1CE265AD51D0095061E /* AppComponent.swift */,
 				919B1693265AD26100FBD292 /* ContentView.swift */,
 				919B1695265AD26200FBD292 /* Assets.xcassets */,
 				919B169A265AD26200FBD292 /* Main.storyboard */,
@@ -131,8 +149,27 @@
 			children = (
 				919B16B2265AD26200FBD292 /* scratchUITests.swift */,
 				919B16B4265AD26200FBD292 /* Info.plist */,
+				91EFF192265AD38A0095061E /* BaseTests.swift */,
+				91EFF197265AD3AB0095061E /* TestsTests.swift */,
 			);
 			path = scratchUITests;
+			sourceTree = "<group>";
+		};
+		91EFF19C265AD3CA0095061E /* AccessibilityTextElement */ = {
+			isa = PBXGroup;
+			children = (
+				91EFF19D265AD3E10095061E /* AccessibilityTextElement.swift */,
+				91EFF1A5265AD3F00095061E /* AccessibilityTextElementAdaptor.swift */,
+			);
+			path = AccessibilityTextElement;
+			sourceTree = "<group>";
+		};
+		91EFF1AA265AD4130095061E /* AXEngine */ = {
+			isa = PBXGroup;
+			children = (
+				91EFF1AB265AD41D0095061E /* AXEngine.swift */,
+			);
+			path = AXEngine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,8 +302,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91EFF19E265AD3E10095061E /* AccessibilityTextElement.swift in Sources */,
 				919B1694265AD26100FBD292 /* ContentView.swift in Sources */,
+				91EFF1A6265AD3F00095061E /* AccessibilityTextElementAdaptor.swift in Sources */,
+				91EFF1AC265AD41D0095061E /* AXEngine.swift in Sources */,
 				919B1692265AD26100FBD292 /* AppDelegate.swift in Sources */,
+				91EFF1CF265AD51D0095061E /* AppComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +323,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91EFF1BE265AD4AD0095061E /* AccessibilityTextElementAdaptor.swift in Sources */,
+				91EFF1B6265AD4A90095061E /* AXEngine.swift in Sources */,
+				91EFF198265AD3AB0095061E /* TestsTests.swift in Sources */,
+				91EFF193265AD38B0095061E /* BaseTests.swift in Sources */,
 				919B16B3265AD26200FBD292 /* scratchUITests.swift in Sources */,
+				91EFF1BA265AD4AB0095061E /* AccessibilityTextElement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
