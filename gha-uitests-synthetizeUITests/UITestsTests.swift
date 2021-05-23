@@ -1,3 +1,4 @@
+@testable import gha_uitests_synthetizeUITests
 import XCTest
 
 class UITestsTests: UITestsTests_BaseTests {
@@ -12,7 +13,7 @@ coz like come on there's so me shits inside.
         app.textViews.firstMatch.typeText(textInAXFocusedElement)
         app.textViews.firstMatch.typeKey(.upArrow, modifierFlags: [.command])
 
-        XCTAssertTrue(1 == 1)
+        XCTAssertNotNil(AX.axFocusedElement())
     }
     
     func test_that_the_caret_location_is_equal_to_0_if_the_TextView_is_empty() {
@@ -20,7 +21,7 @@ coz like come on there's so me shits inside.
         app.textViews.firstMatch.tap()
         app.textViews.firstMatch.typeText(textInAXFocusedElement)
 
-        XCTAssertTrue(1 == 1)
+        XCTAssertNotNil(AX.axFocusedElement())
     }
     
     func test_that_the_caret_location_is_equal_to_text_length_if_caret_is_at_the_end_of_a_TextView() {
@@ -34,7 +35,7 @@ friend...
         app.textViews.firstMatch.tap()
         app.textViews.firstMatch.typeText(textInAXFocusedElement)
 
-        XCTAssertTrue(1 == 1)
+        XCTAssertNotNil(AX.axFocusedElement())
     }
 
     func test_that_the_caret_location_is_correct_if_caret_is_between_the_beginning_and_the_end_of_a_TextView() {
@@ -52,7 +53,7 @@ hallelujah
         app.textViews.firstMatch.typeKey(.rightArrow, modifierFlags: [])
 
 
-        XCTAssertTrue(1 == 1)
+        XCTAssertNotNil(AX.axFocusedElement())
     }
 
 }

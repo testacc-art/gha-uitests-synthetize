@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		915B693F265A6AA500D207EE /* UITestsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915B693E265A6AA500D207EE /* UITestsTests.swift */; };
 		915B6941265A6B4B00D207EE /* UITests_BaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915B6940265A6B4B00D207EE /* UITests_BaseTests.swift */; };
+		919420F5265A7DA400DD96A0 /* AX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919420F4265A7DA400DD96A0 /* AX.swift */; };
+		919420F9265A7DF100DD96A0 /* AX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919420F4265A7DA400DD96A0 /* AX.swift */; };
 		91F1900C265A662D00FE2C4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F1900B265A662D00FE2C4D /* AppDelegate.swift */; };
 		91F1900E265A662D00FE2C4D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F1900D265A662D00FE2C4D /* ContentView.swift */; };
 		91F19010265A662E00FE2C4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91F1900F265A662E00FE2C4D /* Assets.xcassets */; };
@@ -37,6 +39,7 @@
 /* Begin PBXFileReference section */
 		915B693E265A6AA500D207EE /* UITestsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestsTests.swift; sourceTree = "<group>"; };
 		915B6940265A6B4B00D207EE /* UITests_BaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITests_BaseTests.swift; sourceTree = "<group>"; };
+		919420F4265A7DA400DD96A0 /* AX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AX.swift; sourceTree = "<group>"; };
 		91F19008265A662D00FE2C4D /* gha-uitests-synthetize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gha-uitests-synthetize.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F1900B265A662D00FE2C4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91F1900D265A662D00FE2C4D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -107,6 +110,7 @@
 				91F19017265A662E00FE2C4D /* Info.plist */,
 				91F19018265A662E00FE2C4D /* gha_uitests_synthetize.entitlements */,
 				91F19011265A662E00FE2C4D /* Preview Content */,
+				919420F4265A7DA400DD96A0 /* AX.swift */,
 			);
 			path = "gha-uitests-synthetize";
 			sourceTree = "<group>";
@@ -270,6 +274,7 @@
 			files = (
 				91F1900E265A662D00FE2C4D /* ContentView.swift in Sources */,
 				91F1900C265A662D00FE2C4D /* AppDelegate.swift in Sources */,
+				919420F5265A7DA400DD96A0 /* AX.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +292,7 @@
 			files = (
 				915B6941265A6B4B00D207EE /* UITests_BaseTests.swift in Sources */,
 				915B693F265A6AA500D207EE /* UITestsTests.swift in Sources */,
+				919420F9265A7DF100DD96A0 /* AX.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
