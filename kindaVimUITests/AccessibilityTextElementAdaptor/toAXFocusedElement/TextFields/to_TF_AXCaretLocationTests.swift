@@ -9,9 +9,10 @@ class to_TF_AXCaretLocationTests: ATEA_BaseTests {
             axCaretLocation: 0
         )
 
-        let textInAXFocusedElement = text
+        sleep(2)
+
         app.textFields.firstMatch.tap()
-        app.textFields.firstMatch.typeText(textInAXFocusedElement)
+        app.textFields.firstMatch.typeText(text)
 
         let conversionSucceeded = AccessibilityTextElementAdaptor.toAXFocusedElememt(from: accessibilityElement)
         XCTAssertTrue(conversionSucceeded)
@@ -27,9 +28,10 @@ class to_TF_AXCaretLocationTests: ATEA_BaseTests {
             axCaretLocation: 4
         )
 
-        let textInAXFocusedElement = text
+        sleep(2)
+
         app.textFields.firstMatch.tap()
-        app.textFields.firstMatch.typeText(textInAXFocusedElement)
+        app.textFields.firstMatch.typeText(text)
 
         let conversionSucceeded = AccessibilityTextElementAdaptor.toAXFocusedElememt(from: accessibilityElement)
         XCTAssertTrue(conversionSucceeded)
@@ -45,9 +47,10 @@ class to_TF_AXCaretLocationTests: ATEA_BaseTests {
             axCaretLocation: 19
         )
 
-        let textInAXFocusedElement = text
+        sleep(2)
+
         app.textFields.firstMatch.tap()
-        app.textFields.firstMatch.typeText(textInAXFocusedElement)
+        app.textFields.firstMatch.typeText(text)
 
         let conversionSucceeded = AccessibilityTextElementAdaptor.toAXFocusedElememt(from: accessibilityElement)
         XCTAssertFalse(conversionSucceeded)
