@@ -8,8 +8,9 @@ class AppComponent {
     }
 
     private func setUpWindowsState() {
-//        NSApplication.shared.hide(self)
+        //        NSApplication.shared.hide(self)
 
+        #if UITESTING
         let contentView = ContentView()
 
         accessibilityElementAdaptorTestingWindow = NSWindow(
@@ -21,6 +22,7 @@ class AppComponent {
         accessibilityElementAdaptorTestingWindow.center()
         accessibilityElementAdaptorTestingWindow.contentView = NSHostingView(rootView: contentView)
         accessibilityElementAdaptorTestingWindow.makeKeyAndOrderFront(nil)
+        #endif
     }
 
 }
