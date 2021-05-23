@@ -65,7 +65,7 @@ hallelujah
         app.textViews.firstMatch.tap()
         app.textViews.firstMatch.typeText(textInAXFocusedElement)
 
-        XCTAssertNotNil(AX.toAXFocusedElememt())
+        XCTAssertTrue(AX.toAXFocusedElememt())
     }
 
     func test_that_we_can_set_the_caret_location_wherever_between_the_beginning_and_the_end_of_the_line() {
@@ -76,7 +76,7 @@ those shits never stop
         app.textViews.firstMatch.tap()
         app.textViews.firstMatch.typeText(textInAXFocusedElement)
 
-        XCTAssertNotNil(AX.toAXFocusedElememt())
+        XCTAssertTrue(AX.toAXFocusedElememt())
     }
 
 }
