@@ -149,6 +149,17 @@
 			path = TextViews;
 			sourceTree = "<group>";
 		};
+		91DAA267265AE66D007228EC /* AccessibilityTextElementAdaptor */ = {
+			isa = PBXGroup;
+			children = (
+				91DAA233265AE1D0007228EC /* ATEA_BaseTests.swift */,
+				91DAA254265AE5D1007228EC /* Others */,
+				91DAA255265AE5D6007228EC /* fromAXFocusedElement */,
+				91DAA256265AE5E1007228EC /* toAXFocusedElement */,
+			);
+			path = AccessibilityTextElementAdaptor;
+			sourceTree = "<group>";
+		};
 		91F18FFF265A662D00FE2C4D = {
 			isa = PBXGroup;
 			children = (
@@ -206,11 +217,8 @@
 		91F1902B265A662E00FE2C4D /* gha-uitests-synthetizeUITests */ = {
 			isa = PBXGroup;
 			children = (
-				91DAA256265AE5E1007228EC /* toAXFocusedElement */,
-				91DAA255265AE5D6007228EC /* fromAXFocusedElement */,
-				91DAA254265AE5D1007228EC /* Others */,
+				91DAA267265AE66D007228EC /* AccessibilityTextElementAdaptor */,
 				91F1902E265A662E00FE2C4D /* Info.plist */,
-				91DAA233265AE1D0007228EC /* ATEA_BaseTests.swift */,
 			);
 			path = "gha-uitests-synthetizeUITests";
 			sourceTree = "<group>";
