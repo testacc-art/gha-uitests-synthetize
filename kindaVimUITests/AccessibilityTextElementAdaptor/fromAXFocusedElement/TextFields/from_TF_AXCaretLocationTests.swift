@@ -7,9 +7,9 @@ class from_TF_AXCaretLocationTests: ATEA_BaseTests {
 
         sleep(2)
 
-        app.textFields.firstMatch.tap()
-        app.textFields.firstMatch.typeText(textInAXFocusedElement)
-        app.textFields.firstMatch.typeKey(.leftArrow, modifierFlags: [.command])
+        XCUIApplication().textFields.firstMatch.tap()
+        XCUIApplication().textFields.firstMatch.typeText(textInAXFocusedElement)
+        XCUIApplication().textFields.firstMatch.typeKey(.leftArrow, modifierFlags: [.command])
 
         let accessibilityElement = AccessibilityTextElementAdaptor.fromAXFocusedElement()
 

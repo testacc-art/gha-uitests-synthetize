@@ -2,8 +2,6 @@ import XCTest
 
 class ATEA_BaseTests: XCTestCase {
 
-    var app: XCUIApplication!
-
     override func setUpWithError() throws {
         XCUIApplication().terminate()
 
@@ -11,8 +9,7 @@ class ATEA_BaseTests: XCTestCase {
 
         continueAfterFailure = false
 
-        app = XCUIApplication()
-        app.launch()
+        XCUIApplication().launch()
     }
 
     override func tearDown() {
