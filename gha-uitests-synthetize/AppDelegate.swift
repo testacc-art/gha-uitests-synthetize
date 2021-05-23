@@ -8,9 +8,11 @@
 import Cocoa
 import SwiftUI
 
+#if !DEBUG
 var eventTapCallback: CGEventTapCallBack = { proxy, _, event, _ in
     return Unmanaged.passUnretained(event)
 }
+#endif
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -32,6 +34,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.contentView = NSHostingView(rootView: contentView)
         window.makeKeyAndOrderFront(nil)
         
+        #if !DEBUG
         guard let eventTap = CGEvent.tapCreate(
             tap: .cghidEventTap,
             place: .headInsertEventTap,
@@ -45,6 +48,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         let runLoopSource = CFMachPortCreateRunLoopSource(kCFAllocatorDefault, eventTap, 0)
         CFRunLoopAddSource(CFRunLoopGetCurrent(), runLoopSource, .commonModes)
+        #endif
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
