@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		915B693F265A6AA500D207EE /* UITestsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915B693E265A6AA500D207EE /* UITestsTests.swift */; };
+		915B6941265A6B4B00D207EE /* UITests_BaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915B6940265A6B4B00D207EE /* UITests_BaseTests.swift */; };
 		91F1900C265A662D00FE2C4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F1900B265A662D00FE2C4D /* AppDelegate.swift */; };
 		91F1900E265A662D00FE2C4D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F1900D265A662D00FE2C4D /* ContentView.swift */; };
 		91F19010265A662E00FE2C4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91F1900F265A662E00FE2C4D /* Assets.xcassets */; };
 		91F19013265A662E00FE2C4D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91F19012265A662E00FE2C4D /* Preview Assets.xcassets */; };
 		91F19016265A662E00FE2C4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91F19014265A662E00FE2C4D /* Main.storyboard */; };
 		91F19022265A662E00FE2C4D /* gha_uitests_synthetizeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F19021265A662E00FE2C4D /* gha_uitests_synthetizeTests.swift */; };
-		91F1902D265A662E00FE2C4D /* gha_uitests_synthetizeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F1902C265A662E00FE2C4D /* gha_uitests_synthetizeUITests.swift */; };
-		91F1903B265A676800FE2C4D /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F1903A265A676800FE2C4D /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		915B693E265A6AA500D207EE /* UITestsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestsTests.swift; sourceTree = "<group>"; };
+		915B6940265A6B4B00D207EE /* UITests_BaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITests_BaseTests.swift; sourceTree = "<group>"; };
 		91F19008265A662D00FE2C4D /* gha-uitests-synthetize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gha-uitests-synthetize.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F1900B265A662D00FE2C4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91F1900D265A662D00FE2C4D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -47,9 +49,7 @@
 		91F19021265A662E00FE2C4D /* gha_uitests_synthetizeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gha_uitests_synthetizeTests.swift; sourceTree = "<group>"; };
 		91F19023265A662E00FE2C4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91F19028265A662E00FE2C4D /* gha-uitests-synthetizeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "gha-uitests-synthetizeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		91F1902C265A662E00FE2C4D /* gha_uitests_synthetizeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gha_uitests_synthetizeUITests.swift; sourceTree = "<group>"; };
 		91F1902E265A662E00FE2C4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		91F1903A265A676800FE2C4D /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,8 +131,8 @@
 		91F1902B265A662E00FE2C4D /* gha-uitests-synthetizeUITests */ = {
 			isa = PBXGroup;
 			children = (
-				91F1902C265A662E00FE2C4D /* gha_uitests_synthetizeUITests.swift */,
-				91F1903A265A676800FE2C4D /* File.swift */,
+				915B6940265A6B4B00D207EE /* UITests_BaseTests.swift */,
+				915B693E265A6AA500D207EE /* UITestsTests.swift */,
 				91F1902E265A662E00FE2C4D /* Info.plist */,
 			);
 			path = "gha-uitests-synthetizeUITests";
@@ -285,8 +285,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91F1902D265A662E00FE2C4D /* gha_uitests_synthetizeUITests.swift in Sources */,
-				91F1903B265A676800FE2C4D /* File.swift in Sources */,
+				915B6941265A6B4B00D207EE /* UITests_BaseTests.swift in Sources */,
+				915B693F265A6AA500D207EE /* UITestsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,7 +441,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"gha-uitests-synthetize/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ZX49WKA8QN;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "gha-uitests-synthetize/Info.plist";
@@ -465,7 +465,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"gha-uitests-synthetize/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ZX49WKA8QN;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "gha-uitests-synthetize/Info.plist";
@@ -487,7 +487,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ZX49WKA8QN;
 				INFOPLIST_FILE = "gha-uitests-synthetizeTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -509,7 +509,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ZX49WKA8QN;
 				INFOPLIST_FILE = "gha-uitests-synthetizeTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -528,9 +528,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ZX49WKA8QN;
 				INFOPLIST_FILE = "gha-uitests-synthetizeUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -548,9 +549,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ZX49WKA8QN;
 				INFOPLIST_FILE = "gha-uitests-synthetizeUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
