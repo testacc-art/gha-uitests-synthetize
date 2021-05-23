@@ -9,7 +9,7 @@ class to_TF_AXCaretLocationTests: ATEA_BaseTests {
             axCaretLocation: 0
         )
 
-        sleep(2)
+        sleep(15)
 
         XCUIApplication().textFields.firstMatch.tap()
         XCUIApplication().textFields.firstMatch.typeText(text)

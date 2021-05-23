@@ -21,7 +21,6 @@
 		919E35C1264DA11E00542866 /* AccessibilityTextElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913EBF47264ADEE700BCCCEE /* AccessibilityTextElement.swift */; };
 		919FDCF826527AB0003DF40C /* ATEA_BaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919FDCF726527AB0003DF40C /* ATEA_BaseTests.swift */; };
 		919FDD262652922A003DF40C /* from_TF_AXCaretLocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919FDD252652922A003DF40C /* from_TF_AXCaretLocationTests.swift */; };
-		919FDD3426529308003DF40C /* NonTextElementsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919FDD3326529308003DF40C /* NonTextElementsTests.swift */; };
 		91F2EC15265A2DF1003F038B /* to_TF_AXCaretLocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F2EC14265A2DF1003F038B /* to_TF_AXCaretLocationTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,7 +60,6 @@
 		918024B826386E95004FD719 /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
 		919FDCF726527AB0003DF40C /* ATEA_BaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATEA_BaseTests.swift; sourceTree = "<group>"; };
 		919FDD252652922A003DF40C /* from_TF_AXCaretLocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = from_TF_AXCaretLocationTests.swift; sourceTree = "<group>"; };
-		919FDD3326529308003DF40C /* NonTextElementsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonTextElementsTests.swift; sourceTree = "<group>"; };
 		91F2EC14265A2DF1003F038B /* to_TF_AXCaretLocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = to_TF_AXCaretLocationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -175,7 +173,6 @@
 				919FDCF726527AB0003DF40C /* ATEA_BaseTests.swift */,
 				91F2EC10265A2CEE003F038B /* fromAXFocusedElement */,
 				91F2EC11265A2CF5003F038B /* toAXFocusedElement */,
-				919FDD192652918D003DF40C /* Others */,
 			);
 			path = AccessibilityTextElementAdaptor;
 			sourceTree = "<group>";
@@ -186,14 +183,6 @@
 				91F2EC14265A2DF1003F038B /* to_TF_AXCaretLocationTests.swift */,
 			);
 			path = TextFields;
-			sourceTree = "<group>";
-		};
-		919FDD192652918D003DF40C /* Others */ = {
-			isa = PBXGroup;
-			children = (
-				919FDD3326529308003DF40C /* NonTextElementsTests.swift */,
-			);
-			path = Others;
 			sourceTree = "<group>";
 		};
 		91F2EC10265A2CEE003F038B /* fromAXFocusedElement */ = {
@@ -371,7 +360,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				919FDCF826527AB0003DF40C /* ATEA_BaseTests.swift in Sources */,
-				919FDD3426529308003DF40C /* NonTextElementsTests.swift in Sources */,
 				91F2EC15265A2DF1003F038B /* to_TF_AXCaretLocationTests.swift in Sources */,
 				912686762657FCBA0096E927 /* AXEngine.swift in Sources */,
 				919FDD262652922A003DF40C /* from_TF_AXCaretLocationTests.swift in Sources */,
