@@ -14,6 +14,7 @@
 		91F19016265A662E00FE2C4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91F19014265A662E00FE2C4D /* Main.storyboard */; };
 		91F19022265A662E00FE2C4D /* gha_uitests_synthetizeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F19021265A662E00FE2C4D /* gha_uitests_synthetizeTests.swift */; };
 		91F1902D265A662E00FE2C4D /* gha_uitests_synthetizeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F1902C265A662E00FE2C4D /* gha_uitests_synthetizeUITests.swift */; };
+		91F1903B265A676800FE2C4D /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F1903A265A676800FE2C4D /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		91F19028265A662E00FE2C4D /* gha-uitests-synthetizeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "gha-uitests-synthetizeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F1902C265A662E00FE2C4D /* gha_uitests_synthetizeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gha_uitests_synthetizeUITests.swift; sourceTree = "<group>"; };
 		91F1902E265A662E00FE2C4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91F1903A265A676800FE2C4D /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				91F1902C265A662E00FE2C4D /* gha_uitests_synthetizeUITests.swift */,
+				91F1903A265A676800FE2C4D /* File.swift */,
 				91F1902E265A662E00FE2C4D /* Info.plist */,
 			);
 			path = "gha-uitests-synthetizeUITests";
@@ -283,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91F1902D265A662E00FE2C4D /* gha_uitests_synthetizeUITests.swift in Sources */,
+				91F1903B265A676800FE2C4D /* File.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
