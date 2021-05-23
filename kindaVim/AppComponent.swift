@@ -8,7 +8,7 @@ class AppComponent {
     }
 
     private func setUpWindowsState() {
-        NSApplication.shared.hide(self)
+//        NSApplication.shared.hide(self)
 
         #if UITESTING
         let contentView = ContentView()
