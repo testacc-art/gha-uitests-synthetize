@@ -18,9 +18,7 @@ jobs:
     - uses: actions/checkout@v2
       with:
         fetch-depth: 2
-    - name: switch xamarin
-      run: |
-        echo $AGENT_HOMEDIRECTORY
-        /bin/bash -c "sudo $AGENT_HOMEDIRECTORY/scripts/select-xamarin-sdk.sh 6_12_7"
     - name: run UI Tests
-      run: xcodebuild clean -scheme "AccessibilityElementAdaptor UI Tests" -configuration "UI Testing" test
+      run: |
+        /bin/bash -c "sudo xcode-select -s /Applications/Xcode_12.3.app/Contents/Developer"
+        xcodebuild clean -scheme "AccessibilityElementAdaptor UI Tests" -configuration "UI Testing" test
