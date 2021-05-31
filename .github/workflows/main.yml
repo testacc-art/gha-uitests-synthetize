@@ -20,5 +20,4 @@ jobs:
         fetch-depth: 2
     - name: run UI Tests
       run: |
-        /bin/bash -c "sudo $AGENT_HOMEDIRECTORY/scripts/select-xamarin-sdk.sh 6_12_6"
         xcodebuild clean -scheme "AccessibilityElementAdaptor UI Tests" -configuration "UI Testing" test
