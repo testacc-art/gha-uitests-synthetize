@@ -20,4 +20,5 @@ jobs:
         fetch-depth: 2
     - name: run UI Tests
       run: |
+        defaults write com.apple.iphonesimulator ConnectHardwareKeyboard 0
         xcodebuild clean -scheme "AccessibilityElementAdaptor UI Tests" -configuration "UI Testing" test
