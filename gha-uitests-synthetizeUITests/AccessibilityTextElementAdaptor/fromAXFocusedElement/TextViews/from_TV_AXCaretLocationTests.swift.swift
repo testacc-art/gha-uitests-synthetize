@@ -9,6 +9,7 @@ a TextView that is not empty
 coz like come on there's so me shits inside.
 """
         app.textViews.firstMatch.tap()
+        sleep(2)
         app.textViews.firstMatch.typeText(textInAXFocusedElement)
         app.textViews.firstMatch.typeKey(.upArrow, modifierFlags: [.command])
 
@@ -20,6 +21,7 @@ coz like come on there's so me shits inside.
     func test_that_the_caret_location_is_equal_to_0_if_the_TextView_is_empty() {
         let textInAXFocusedElement = ""
         app.textViews.firstMatch.tap()
+        sleep(2)
         app.textViews.firstMatch.typeText(textInAXFocusedElement)
 
         let accessibilityElement = AccessibilityTextElementAdaptor.fromAXFocusedElement()
@@ -36,6 +38,7 @@ my
 friend...
 """
         app.textViews.firstMatch.tap()
+        sleep(2)
         app.textViews.firstMatch.typeText(textInAXFocusedElement)
 
         let accessibilityElement = AccessibilityTextElementAdaptor.fromAXFocusedElement()
@@ -51,6 +54,7 @@ it's biiiiiiig and long
 hallelujah
 """
         app.textViews.firstMatch.tap()
+        sleep(2)
         app.textViews.firstMatch.typeText(textInAXFocusedElement)
         app.textViews.firstMatch.typeKey(.upArrow, modifierFlags: [.command])
         app.textViews.firstMatch.typeKey(.downArrow, modifierFlags: [])
