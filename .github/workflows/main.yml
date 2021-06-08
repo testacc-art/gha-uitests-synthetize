@@ -21,4 +21,5 @@ jobs:
     - name: run UI Tests
       run: |
         defaults write com.apple.iphonesimulator ConnectHardwareKeyboard 0
-        xcodebuild clean -scheme "AccessibilityElementAdaptor UI Tests" -configuration "UI Testing" -parallel-testing-enabled NO -runFirstLaunch test
+        xcodebuild -checkFirstLaunchStatus
+        xcodebuild clean -scheme "AccessibilityElementAdaptor UI Tests" -configuration "UI Testing" -parallel-testing-enabled NO test
