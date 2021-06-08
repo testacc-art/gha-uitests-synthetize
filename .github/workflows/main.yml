@@ -20,4 +20,4 @@ jobs:
         fetch-depth: 2
     - name: run UI Tests
       run: |
-        xcodebuild build -scheme "AccessibilityElementAdaptor UI Tests" -configuration "UI Testing" -destination 'platform=macosx,arch=x86_64' test CODE_SIGNING_ALLOWED=NO
+        xcodebuild test -scheme "AccessibilityElementAdaptor UI Tests" -configuration "UI Testing" CODE_SIGNING_ALLOWED=NO
