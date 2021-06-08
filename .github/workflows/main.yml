@@ -12,7 +12,7 @@ on:
 jobs:
   swift:
     name: on Catalina
-    runs-on: macos-10.15
+    runs-on: macos-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -20,4 +20,4 @@ jobs:
         fetch-depth: 2
     - name: run UI Tests
       run: |
-        xcodebuild clean -scheme "AccessibilityElementAdaptor UI Tests" -configuration "UI Testing" test
+        xcodebuild test -project gha-uitests-synthetize.xcodeproj -scheme gha-uitests-synthetize -destination 'platform=Simulator'
