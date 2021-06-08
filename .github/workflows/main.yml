@@ -22,4 +22,6 @@ jobs:
       run: |
         defaults write com.apple.iphonesimulator ConnectHardwareKeyboard 0
         xcodebuild -checkFirstLaunchStatus
-        xcodebuild clean -scheme "AccessibilityElementAdaptor UI Tests" -configuration "UI Testing" -parallel-testing-enabled NO test
+        xcodebuild clean -scheme "AccessibilityElementAdaptor UI Tests" -configuration "UI Testing" -parallel-testing-enabled NO test 
+      env:
+       destination: "platform=iOS Simulator,OS=13.3,name=iPhone 11"
