@@ -20,4 +20,4 @@ jobs:
         fetch-depth: 2
     - name: run UI Tests
       run: |
-        xcodebuild test -project gha-uitests-synthetize.xcodeproj -scheme gha-uitests-synthetize -destination 'platform=macosx,arch=x86_64' CODE_SIGNING_ALLOWED=NO
+        xcodebuild test -scheme gha-uitests-synthetize -destination 'platform=macosx,arch=x86_64' CODE_SIGNING_ALLOWED=NO
