@@ -20,8 +20,8 @@ jobs:
         fetch-depth: 2
     - name: Check ports
       run: sudo lsof -i -n -P
-#     - name: Run scod
-#       run: xcodebuild -runFirstLaunch
+    - name: Run scod
+      run: xcodebuild -runFirstLaunch
     - name: run UI Tests
       run: |
-        sudo xcodebuild clean -scheme "AccessibilityElementAdaptor UI Tests" -configuration "UI Testing" test
+        xcodebuild clean -scheme "AccessibilityElementAdaptor UI Tests" -configuration "UI Testing" test
