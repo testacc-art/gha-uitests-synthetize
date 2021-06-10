@@ -31,8 +31,10 @@ jobs:
     - name: Kill pid
       if: ${{ always() }}
       run: |
-          kill -SIGINT $RECORDING_PID
+          echo "CHECKPID is $CHECKPID"
+          kill -SIGINT $CHECKPID
           sleep 10
+          ls
           cp recording.mov /tmp/iwfpapp_screenshot
     - name: upload screenshot
       if: ${{ always() }}
