@@ -25,9 +25,9 @@ jobs:
           sleep 5
           export RECORDING_PID=${!}
           echo "Recording process up with pid: ${RECORDING_PID}"
+          echo "CHECKPID=$RECORDING_PID" >> $GITHUB_ENV
           xcodebuild clean -scheme "AccessibilityElementAdaptor UI Tests" -configuration "UI Testing" test
           sleep 5
-          echo "CHECKPID=$RECORDING_PID" >> $GITHUB_ENV
     - name: Kill pid
       if: ${{ always() }}
       run: |
