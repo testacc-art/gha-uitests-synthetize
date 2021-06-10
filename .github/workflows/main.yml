@@ -27,4 +27,6 @@ jobs:
         xcodebuild clean -scheme "AccessibilityElementAdaptor UI Tests" -configuration "UI Testing" test
     - name: Check ports
       if: ${{ always() }}
-      run: sudo lsof -i -n -P
+      run: |
+        sudo lsof -i -n -P
+        xcodebuild test -scheme "AccessibilityElementAdaptor UI Tests" -configuration "UI Testing"
