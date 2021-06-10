@@ -20,13 +20,22 @@ jobs:
         fetch-depth: 2
     - name: Check ports
       run: sudo lsof -i -n -P
+    - uses: OrbitalOwen/desktop-screenshot-action@0.1
+      with:
+        file-name: 'first.jpg'
     - name: Run scod
       run: xcodebuild -runFirstLaunch
+    - uses: OrbitalOwen/desktop-screenshot-action@0.1
+      with:
+        file-name: 'second.jpg'
     - name: run UI Tests
       run: |
         xcodebuild clean -scheme "AccessibilityElementAdaptor UI Tests" -configuration "UI Testing" test
+    - uses: OrbitalOwen/desktop-screenshot-action@0.1
+      if: ${{ always() }}
+      with:
+        file-name: 'third.jpg'
     - name: Check ports
       if: ${{ always() }}
       run: |
         sudo lsof -i -n -P
-        xcodebuild test -scheme "AccessibilityElementAdaptor UI Tests" -configuration "UI Testing"
