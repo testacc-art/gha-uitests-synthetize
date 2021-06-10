@@ -18,6 +18,25 @@ jobs:
     - uses: actions/checkout@v2
       with:
         fetch-depth: 2
-    - name: run UI Tests
+    - name: run integration tests
+      timeout-minutes: 30
       run: |
-        xcodebuild clean -scheme "AccessibilityElementAdaptor UI Tests" -configuration "UI Testing" test
+          xcrun simctl io booted recordVideo recording.mov &
+          sleep 5
+          export RECORDING_PID=${!}
+          echo "Recording process up with pid: ${RECORDING_PID}"
+          xcodebuild clean -scheme "AccessibilityElementAdaptor UI Tests" -configuration "UI Testing" test
+          sleep 5
+          echo "CHECKPID=$RECORDING_PID" >> $GITHUB_ENV
+    - name: Kill pid
+      if: ${{ always() }}
+      run: |
+          kill -SIGINT $RECORDING_PID
+          sleep 10
+          cp recording.mov /tmp/iwfpapp_screenshot
+    - name: upload screenshot
+      if: ${{ always() }}
+      uses: actions/upload-artifact@master
+      with:
+        name: online_screenshot
+        path: /tmp/iwfpapp_screenshot
