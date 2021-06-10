@@ -26,16 +26,21 @@ jobs:
           export RECORDING_PID=${!}
           echo "Recording process up with pid: ${RECORDING_PID}"
           echo "CHECKPID=$RECORDING_PID" >> $GITHUB_ENV
-          xcodebuild clean -scheme "AccessibilityElementAdaptor UI Tests" -configuration "UI Testing" test
+          xcodebuild clean -scheme "AccessibilityElementAdaptor UI Tests" -configuration "UI Testing" test 2> /dev/null
           sleep 5
-    - name: Kill pid
-      if: ${{ always() }}
-      run: |
           echo "CHECKPID is $CHECKPID"
-          # kill -SIGINT $CHECKPID
+          kill -SIGINT $RECORDING_PID
           sleep 10
           ls
           cp recording.mov /tmp/iwfpapp_screenshot
+#     - name: Kill pid
+#       if: ${{ always() }}
+#       run: |
+#           echo "CHECKPID is $CHECKPID"
+#           # kill -SIGINT $CHECKPID
+#           sleep 10
+#           ls
+#           cp recording.mov /tmp/iwfpapp_screenshot
     - name: upload screenshot
       if: ${{ always() }}
       uses: actions/upload-artifact@master
