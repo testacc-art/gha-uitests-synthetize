@@ -26,7 +26,7 @@ jobs:
       if: ${{ always() }}
       run: |
         ls ~/Library
-        ls ~/Library/Preferences/ | grep "simulator"
+        ls ~/Library/Preferences
     - name: run UI Tests
       run: |
         defaults write com.apple.iphonesimulator ConnectHardwareKeyboard 0
