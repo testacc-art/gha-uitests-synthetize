@@ -32,7 +32,7 @@ jobs:
       if: ${{ always() }}
       run: |
           echo "CHECKPID is $CHECKPID"
-          kill -SIGINT $CHECKPID
+          # kill -SIGINT $CHECKPID
           sleep 10
           ls
           cp recording.mov /tmp/iwfpapp_screenshot
