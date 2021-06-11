@@ -1,6 +1,8 @@
-import {runAppleScriptAsync} from 'run-applescript';
-
-runAppleScriptAsync(`
+import applescript from 'applescript';
+ 
+// Very basic AppleScript command. Returns the song name of each
+// currently selected track in iTunes as an 'Array' of 'String's.
+let script = `
 tell application "QuickTime Player"
   --activate
   new screen recording
@@ -11,6 +13,10 @@ tell application "QuickTime Player"
   save document 1 in file "/tmp/test.mov"
   quit
 end tell
-`).then(result => {
-  console.log(`result is ${result}`);
-}).catch(console.log);
+`;
+ 
+applescript.execString(script, function(err, rtn) {
+  if (err) {
+    // Something went wrong!
+  }
+});
