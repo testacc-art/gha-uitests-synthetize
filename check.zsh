@@ -1,13 +1,16 @@
 --  # Setup to do a screen recording.
 
-tell application "QuickTime Player" to new screen recording
+tell application "System Events" to keystroke "%" using {shift down, command down}
 
 --  # Start the screen recording.
 
 tell application "System Events" to tell process "Screen Shot"
-    repeat until exists button "Record" of its front window
+    repeat until exists its front window
         delay 0.1
     end repeat
+    if not (exists button "Record" of its front window) then
+        click checkbox "Record Entire Screen" of its front window
+    end if
     click button "Record" of its front window
 end tell
 
