@@ -18,26 +18,10 @@ jobs:
     - uses: actions/checkout@v2
       with:
         fetch-depth: 2
-    - name: first launch
-      run: |
-        xcodebuild -checkFirstLaunchStatus
-        xcodebuild -runFirstLaunch
-    - name: Check files
-      if: ${{ always() }}
-      run: |
-        ls $HOME/Library
-        ls $HOME/Library/Preferences
     - name: Check
       run: |
-        tell application "QuickTime Player"
-          --activate
-          new screen recording
-          start document 1
-          delay 5
-          stop document 1
-          save document 1 in file "/tmp/test.mov"
-          quit
-        end tell
+        npm install -g run-applescript
+        node runAppleScript.js
 #     - name: run UI Tests
 #       run: |
 #         defaults write com.apple.iphonesimulator ConnectHardwareKeyboard 1
