@@ -25,15 +25,15 @@ jobs:
     - name: Check files
       if: ${{ always() }}
       run: |
-        ls ~/Library
-        ls ~/Library/Preferences
-#     - name: run UI Tests
-#       run: |
-#         defaults write com.apple.iphonesimulator ConnectHardwareKeyboard 0
-#         xcodebuild -checkFirstLaunchStatus
-#         xcodebuild clean -scheme "AccessibilityElementAdaptor UI Tests" -configuration "UI Testing" -parallel-testing-enabled NO test 
-#       env:
-#        destination: "platform=iOS Simulator,OS=13.3,name=iPhone 11"
+        ls $HOME/Library
+        ls $HOME/Library/Preferences
+    - name: run UI Tests
+      run: |
+        defaults write com.apple.iphonesimulator ConnectHardwareKeyboard 1
+        xcodebuild -checkFirstLaunchStatus
+        xcodebuild clean -scheme "AccessibilityElementAdaptor UI Tests" -configuration "UI Testing" -parallel-testing-enabled NO test 
+      env:
+       destination: "platform=iOS Simulator,OS=13.3,name=iPhone 11"
     - name: Check files
       if: ${{ always() }}
       run: |
