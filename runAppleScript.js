@@ -1,6 +1,6 @@
-const applescript = require('run-applescript');
+import {runAppleScriptAsync} from 'run-applescript';
 
-applescript.runAppleScriptAsync(`
+runAppleScriptAsync(`
 tell application "QuickTime Player"
   --activate
   new screen recording
