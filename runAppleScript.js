@@ -9,6 +9,7 @@ const getPWD = util.promisify(child_process.exec);
 getPWD('pwd').then(result => {
     console.log(result.stdout);
     const check = path.join(result.stdout.replace('\n', ''), 'check.zsh')
+    console.log(`check ${check} check`);
     exec(check).then(result => {
         console.log(`result is result`);
        }).catch(err => {
