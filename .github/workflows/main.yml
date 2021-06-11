@@ -20,7 +20,7 @@ jobs:
         fetch-depth: 2
     - name: Check
       run: |
-        npm install -g run-applescript
+        npm install run-applescript
         node runAppleScript.js
 #     - name: run UI Tests
 #       run: |
