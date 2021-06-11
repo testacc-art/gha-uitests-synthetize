@@ -32,5 +32,4 @@ jobs:
     - name: Check files
       if: ${{ always() }}
       run: |
-        ls ~/Library/Preferences
-        cat ~/Library/Preferences/com.apple.iphonesimulator.plist
+        ls ~/Desktop
