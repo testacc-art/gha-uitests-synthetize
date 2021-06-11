@@ -21,18 +21,20 @@ jobs:
     - name: run integration tests
       timeout-minutes: 30
       run: |
-          xcrun simctl io booted recordVideo recording.mov &
-          sleep 5
-          export RECORDING_PID=${!}
-          echo "Recording process up with pid: ${RECORDING_PID}"
-          echo "CHECKPID=$RECORDING_PID" >> $GITHUB_ENV
+          brew install ffmpeg
+          ffmpeg -f avfoundation -list_devices true -i ""
+          # xcrun simctl io booted recordVideo recording.mov &
+          # sleep 5
+          # export RECORDING_PID=${!}
+          # echo "Recording process up with pid: ${RECORDING_PID}"
+          # echo "CHECKPID=$RECORDING_PID" >> $GITHUB_ENV
           # xcodebuild clean -scheme "AccessibilityElementAdaptor UI Tests" -configuration "UI Testing" test 65> /dev/null
-          sleep 15
-          echo "CHECKPID is $CHECKPID"
-          kill -SIGINT $RECORDING_PID
-          sleep 10
-          ls
-          cp recording.mov /tmp/iwfpapp_screenshot
+          # sleep 15
+          # echo "CHECKPID is $CHECKPID"
+          # kill -SIGINT $RECORDING_PID
+          # sleep 10
+          # ls
+          # cp recording.mov /tmp/iwfpapp_screenshot
 #     - name: Kill pid
 #       if: ${{ always() }}
 #       run: |
@@ -41,9 +43,9 @@ jobs:
 #           sleep 10
 #           ls
 #           cp recording.mov /tmp/iwfpapp_screenshot
-    - name: upload screenshot
-      if: ${{ always() }}
-      uses: actions/upload-artifact@master
-      with:
-        name: online_screenshot
-        path: /tmp/iwfpapp_screenshot
+#     - name: upload screenshot
+#       if: ${{ always() }}
+#       uses: actions/upload-artifact@master
+#       with:
+#         name: online_screenshot
+#         path: /tmp/iwfpapp_screenshot
