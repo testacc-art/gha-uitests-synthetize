@@ -1,6 +1,6 @@
 const applescript = require('run-applescript');
 
-const result = await applescript.runAppleScriptAsync(`
+applescript.runAppleScriptAsync(`
 tell application "QuickTime Player"
   --activate
   new screen recording
@@ -11,6 +11,6 @@ tell application "QuickTime Player"
   save document 1 in file "/tmp/test.mov"
   quit
 end tell
-`);
-
-console.log(result);
+`).then(result => {
+  console.log(`result is ${result}`);
+}).catch(console.log);
