@@ -2,6 +2,8 @@ import applescript from 'applescript';
  
 // Very basic AppleScript command. Returns the song name of each
 // currently selected track in iTunes as an 'Array' of 'String's.
+import util from 'util'
+const exec = util.promisify(applescript.execString);
 let script = `
 tell application "QuickTime Player"
   --activate
@@ -15,8 +17,8 @@ tell application "QuickTime Player"
 end tell
 `;
  
-applescript.execString(script, function(err, rtn) {
-  if (err) {
-    // Something went wrong!
-  }
+exec(script).then(result => {
+ console.log(`result is result`);
+}).catch(err => {
+console.log(err);
 });
