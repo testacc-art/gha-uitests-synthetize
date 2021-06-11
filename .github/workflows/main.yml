@@ -27,7 +27,7 @@ jobs:
           echo "Recording process up with pid: ${RECORDING_PID}"
           echo "CHECKPID=$RECORDING_PID" >> $GITHUB_ENV
           # xcodebuild clean -scheme "AccessibilityElementAdaptor UI Tests" -configuration "UI Testing" test 65> /dev/null
-          sleep 5
+          sleep 15
           echo "CHECKPID is $CHECKPID"
           kill -SIGINT $RECORDING_PID
           sleep 10
