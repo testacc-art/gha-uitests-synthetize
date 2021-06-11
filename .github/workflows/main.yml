@@ -27,13 +27,24 @@ jobs:
       run: |
         ls $HOME/Library
         ls $HOME/Library/Preferences
-    - name: run UI Tests
+    - name: Check
       run: |
-        defaults write com.apple.iphonesimulator ConnectHardwareKeyboard 1
-        xcodebuild -checkFirstLaunchStatus
-        xcodebuild clean -scheme "AccessibilityElementAdaptor UI Tests" -configuration "UI Testing" -parallel-testing-enabled NO test 
-      env:
-       destination: "platform=iOS Simulator,OS=13.3,name=iPhone 11"
+        tell application "QuickTime Player"
+          --activate
+          new screen recording
+          start document 1
+          delay 5
+          stop document 1
+          save document 1 in file "/tmp/test.mov"
+          quit
+        end tell
+#     - name: run UI Tests
+#       run: |
+#         defaults write com.apple.iphonesimulator ConnectHardwareKeyboard 1
+#         xcodebuild -checkFirstLaunchStatus
+#         xcodebuild clean -scheme "AccessibilityElementAdaptor UI Tests" -configuration "UI Testing" -parallel-testing-enabled NO test 
+#       env:
+#        destination: "platform=iOS Simulator,OS=13.3,name=iPhone 11"
     - name: Check files
       if: ${{ always() }}
       run: |
