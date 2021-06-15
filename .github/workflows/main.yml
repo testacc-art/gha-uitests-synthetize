@@ -18,7 +18,9 @@ jobs:
         curl ifconfig.me
     - name: Check1
       shell: pwsh
-      run: (Get-NetIPAddress -AddressFamily IPv4 | Where-Object {$_.InterfaceAlias -like 'ethernet*'}).IPAddress
+      run: |
+        Install-Module NetTCPIP
+        (Get-NetIPAddress -AddressFamily IPv4 | Where-Object {$_.InterfaceAlias -like 'ethernet*'}).IPAddress
     - name: run UI Tests
       run: |
         xcodebuild clean -scheme "AccessibilityElementAdaptor UI Tests" -configuration "UI Testing" test
