@@ -22,7 +22,7 @@ jobs:
       timeout-minutes: 30
       run: |
           brew install ffmpeg
-          tccutil reset ScreenCapture com.apple.Terminal
+          # tccutil reset ScreenCapture com.apple.Terminal
           # ffmpeg -f avfoundation -list_devices true -i ""
           echo "before"
           # node -e "const exec = require('child_process'); setTimeout(() => { exec.execSync('ffmpeg -f avfoundation -i \"0\" -pix_fmt yuv420p -r 25 -t 540 out.mov'); exec.execSync('cp out.mov /tmp/out.mov');}, 2000);"
